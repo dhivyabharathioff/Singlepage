@@ -1,0 +1,1312 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #492722;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-image: radial-gradient(rgb(102, 38, 15), rgb(40, 18, 10));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.items {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.items::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 40px;
+    background: linear-gradient(90deg,
+            #8b4513,
+            #b5651d);
+
+    transition: 0.8s ease;
+    z-index: -1;
+
+}
+
+.items::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 40px;
+    background: linear-gradient(270deg,
+            #c47a2c,
+            #8b4513);
+
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+.items:hover::before {
+    width: 50%;
+    height: 40px;
+    color: bisque !important
+}
+
+.items:hover::after {
+    width: 50%;
+    height: 40px;
+    color: bisque !important
+}
+
+
+/**=============FIRST PAGE===========**/
+.firstpage {
+    background-image: linear-gradient(rgba(63, 36, 5, 0.72), rgba(54, 31, 6, 0.72)), url('./firstbg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    /* background-color: #311603; */
+}
+
+/**BOTTLE IMG**/
+.img1 {
+    height: 500px;
+    width: 100%;
+    animation-name: coffeeFloat;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes coffeeFloat {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+/**RIGHT HEADING**/
+.exception {
+    color: #c47a2c;
+    font-family: cursive;
+    text-shadow:
+        0 0 5px #c47a2c,
+        0 0 15px rgba(196, 122, 44, 0.4);
+}
+
+/**TIME TO TAKE COFF LINE**/
+.time-cof {
+    font-size: 50px;
+    font-family: "Kaushan Script", cursive;
+    font-size: 42px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-shadow:
+        0 0 5px #c47a2c,
+        0 0 15px rgba(196, 122, 44, 0.4);
+}
+
+/**RIGHT PARA**/
+.content {
+    padding-top: 150px;
+    color: white
+}
+
+.para {
+    font-family: cursive;
+    line-height: 30px;
+}
+
+/**INIDE HEADING SMALL IMG**/
+.bean {
+    height: 100px;
+    width: 100px;
+    animation-name: beanRotate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beanRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.coffee-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    animation-name: fadeUp;
+    animation-duration: 1.6s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* EXPLORE */
+
+.explore-btn {
+    border: none;
+    padding: 14px 24px;
+    border-radius: 30px;
+    background: #dda054;
+    color: #28120a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn i {
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 25px rgba(221, 160, 84, 0.25);
+}
+
+.explore-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* MENU BUTTON */
+
+.menu-btn {
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #806052;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: white;
+    color: #28120a;
+    transform: translateY(-4px);
+}
+
+
+/*  FEATURES  */
+
+.coffee-info {
+    display: flex;
+    gap: 25px;
+    margin-top: 45px;
+    animation-name: fadeUp;
+    animation-duration: 1.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.coffee-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bca99e;
+    font-size: 13px;
+}
+
+.coffee-info i {
+    color: #dda054;
+    font-size: 16px;
+}
+
+.bg {
+    background-color: #28120a;
+}
+
+
+
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .content {
+        padding-top: 0px;
+    }
+
+    .coffee-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .coffee-info {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/**CAROUSAL OVERALL**/
+.overall {
+    height: 100vh;
+    background-image: url(./carbg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.word {
+    font-size: 50px;
+    font-family: "Kaushan Script", cursive;
+    font-size: 42px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-shadow:
+        0 0 5px #c47a2c,
+        0 0 15px rgba(196, 122, 44, 0.4);
+}
+
+/**CAROUSAL IMG**/
+.carousel1 {
+    height: 50%;
+    width: 790px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .carousel1 {
+        height: 174px;
+        width: 210px;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .carousel1 {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+/**********3 RD BOX***********/
+.overall1 {
+    height: 100vh;
+
+}
+
+/***vedio+content***/
+.ved {
+    background-color: rgb(230, 153, 59);
+    height: 700px;
+    width: 100%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/***video***/
+.vedio1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;
+}
+
+/***content***/
+.vedtxt {
+    position: absolute;
+    color: rgb(252, 221, 200);
+    text-align: center;
+    padding: 50px;
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+/***shop button***/
+.shop {
+    height: 50px;
+    width: 15%;
+    border: none;
+    border-radius: 30px;
+    margin-top: 50px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white
+}
+
+.shop:hover {
+    background-color: white;
+    color: #311603;
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .shop {
+        width: 70%;
+        margin-top: 0;
+    }
+
+    .ved {
+        height: 850px
+    }
+
+    .vedtxt {
+        padding: 5px
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .shop {
+        width: 70%
+    }
+}
+
+/*********4 page*********/
+.overall2 {
+    /* background-color: aqua; */
+    /* height: 777px; */
+    width: 100%;
+    /* position: relative;
+    top: -40PX; */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-image: url("./4thpage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    contain: paint
+}
+
+.fullbox {
+    /* background-color: aqua; */
+    min-height: 570px;
+    width: 98%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box1 {
+    /* background-color: rgb(204, 228, 68); */
+    height: 400px;
+    width: 270px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    position: relative;
+    animation-name: manufacture;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+    transition: transform 0.4s ease;
+
+}
+
+@keyframes manufacture {
+    From {
+        Transform: translatex(-900px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+.round1 {
+    background-color: rgba(126, 81, 30, 0.973);
+    height: 200px;
+    width: 90%;
+    border-radius: 50%;
+    border: 3px dotted white;
+}
+
+.step {
+    height: 140px;
+    width: 100%;
+    margin-top: 55px;
+}
+
+.round2 {
+    height: 200px;
+    width: 85%;
+    position: absolute;
+    top: 290px;
+    left: 30px;
+
+
+}
+
+.round3 {
+    background-color: #e0bb74;
+    height: 96px;
+    width: 33%;
+    border-radius: 50%;
+    border: 9px solid hsl(8, 36%, 21%);
+    position: absolute;
+    top: 90px;
+    left: 16px;
+}
+
+.box2 {
+    /* background-color: rgb(224, 221, 204); */
+    height: 400px;
+    width: 270px;
+    margin: 10px;
+    align-self: end;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    animation-name: manufact2;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+    transition: transform 0.4s ease;
+
+}
+
+@keyframes manufact2 {
+    From {
+        Transform: translatey(-900px)
+    }
+
+    To {
+        Transform: translatey(0px)
+    }
+
+
+
+
+}
+
+.round4 {
+    /* background-color: rgb(8, 241, 20); */
+    height: 100px;
+    width: 100%;
+}
+
+.round5 {
+    background-color: rgba(133, 93, 47, 0.973);
+    height: 200px;
+    width: 72%;
+    position: absolute;
+    top: 180px;
+    border-radius: 50%;
+    border: 3px dotted white;
+}
+
+.round6 {
+    background-color: #e0bb74;
+    height: 96px;
+    width: 33%;
+    border-radius: 50%;
+    border: 9px solid #492722;
+    position: absolute;
+    top: 174px;
+    left: 30px;
+
+
+}
+
+
+
+/********box 3**********/
+
+.box3 {
+    /* background-color: rgb(248, 62, 186); */
+    height: 400px;
+    width: 270px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    position: relative;
+    animation-name: manufact3;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+    transition: transform 0.4s ease;
+
+}
+
+@keyframes manufact3 {
+    From {
+        Transform: translatex(900px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+
+
+.rou {
+    height: 340px;
+    width: 340px;
+    animation-name: rool;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    /* animation-timeline: view(); */
+    animation-timing-function: linear;
+    position: absolute;
+    top: -140px;
+    left: -50px;
+}
+
+@keyframes rool {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    .rou {
+
+        height: 264px;
+        width: 146px;
+
+        top: -134px;
+
+    }
+}
+
+/**5th page**/
+
+
+.overall3 {
+    background-color: #260a08;
+    /* height: 800px; */
+    width: 100%;
+    position: relative;
+    top: -10px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-bottom: 210px;
+}
+
+.provide {
+    z-index: 1;
+}
+
+.overallcup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+    padding-top: 30px;
+    margin-top: 30px;
+    /* padding-bottom: 30px; */
+}
+
+.cup {
+    background-color: blueviolet;
+    height: 430px;
+    width: 282px;
+    border-radius: 30px;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+    box-shadow: rgb(235, 174, 69) 0px 22px 70px 5px;
+}
+
+.cup1 {
+
+    animation-name: cp1;
+
+}
+
+@keyframes cp1 {
+    From {
+        Transform: translatex(-600px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+
+.cup2 {
+
+    animation-name: cp2;
+
+
+}
+
+@keyframes cp2 {
+    From {
+        Transform: translatey(600px)
+    }
+
+    To {
+        Transform: translatey(0px)
+    }
+}
+
+
+.cup3 {
+
+    animation-name: cp3;
+
+}
+
+@keyframes cp3 {
+    From {
+        Transform: translatex(600px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+
+
+.cupimg {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.seeds {
+    /* background-color: red; */
+    height: 220px;
+    width: 260px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 20px;
+}
+
+.seed {
+    height: 250px;
+    position: relative;
+    left: -20px;
+    top: -30px;
+    overflow: hidden;
+    animation-name: a4;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes a4 {
+    From {
+        Transform: translatex(-900px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+
+    .cup {
+        /* height: 200px; */
+        width: 250px
+    }
+
+    .seed {
+        display: none;
+    }
+
+    @keyframes manufacture {
+        From {
+            Transform: translatex(500px)
+        }
+
+        To {
+            Transform: translatex(0px)
+        }
+    }
+
+    @keyframes manufact2 {
+        From {
+            Transform: translatey(500px)
+        }
+
+        To {
+            Transform: translatey(0px)
+        }
+    }
+
+    @keyframes manufact3 {
+        From {
+            Transform: translatey(-500px)
+        }
+
+        To {
+            Transform: translatey(0px)
+        }
+    }
+}
+
+/*********************menu box******************/
+.overall4 {
+    /* background-color: yellow; */
+    /* height: 800px; */
+    position: relative;
+    top: -135px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.alphacoders.com/719/thumb-1920-719681.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    contain: paint;
+
+}
+
+.pg6top {
+    /* background-color:red; */
+    /* height: 200px; */
+    width: 860px;
+    /* position: absolute; */
+    /* top: 90px; */
+    /* right:41px; */
+    padding: 10px;
+    color: white;
+    text-shadow: 0px 0px 10px wheat;
+
+}
+
+
+.text {
+    font-size: 8vh;
+    text-align: center;
+
+}
+
+.contains {
+    /* background-color: rgb(58, 247, 11); */
+    /* height: 884px; */
+    /* width: 144px; */
+    z-index: 1;
+    margin-top: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    top: -227px;
+}
+
+
+.box6 {
+    height: 355px;
+    width: 260px;
+    padding: 10px;
+    background-color: wheat;
+    border-radius: 30px;
+    transition: all 1s;
+
+}
+
+
+.box6:hover {
+    transform: translateY(-30px);
+    background-color: #dda054;
+    box-shadow: 0px 0px 10px 5px wheat;
+}
+
+.tin {
+    /* background-color:red ; */
+    height: 100px;
+    width: 130px;
+    margin: 10px;
+    margin-left: 60px;
+    position: relative;
+}
+
+
+
+.idk {
+    padding-left: 150px;
+    position: absolute;
+    bottom: -5px;
+
+}
+
+/*********differenent flavour**********/
+.cupi1 {
+    height: 140px;
+    margin-left: 20px;
+    position: absolute;
+    top: -65px;
+
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .text {
+        font-size: 4vh;
+    }
+
+    .box6 {
+        margin-top: 40px
+    }
+
+}
+
+/**********timing and loc************/
+
+
+.overall5 {
+    background-color: aqua;
+    /* height: 950px; */
+    position: relative;
+    top: -130px;
+}
+
+.opening {
+    /* background-color: blue; */
+    background-image: url("./open.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 400px; */
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+
+.boxx1 {
+    background-color: rgba(31, 31, 30, 0.603);
+    height: 150px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.tit1 {
+    font-size: 60px;
+    color: white;
+}
+
+.boxx2 {
+    background-color: rgba(31, 31, 30, 0.603);
+    height: 250px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+}
+
+.tab {
+    height: 209px;
+    width: 340px;
+    font-size: 30px;
+    color: white;
+
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .openings {
+        /* height: 600px; */
+        margin-bottom: 100px;
+    }
+
+    .boxx1 {
+        width: 300px;
+    }
+
+    .boxx2 {
+        width: 300px;
+    }
+
+}
+
+/* ................review............... */
+.overallreview {
+    width: 100%;
+    background-image: url("./review.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    contain: paint;
+}
+
+
+.review {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.revbox1 {
+    background-color: #7f6244;
+    height: 310px;
+    width: 40%;
+    text-align: center;
+    padding-top: 82px;
+    position: relative;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    animation-name: rev1;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+    box-shadow: rgb(35 26 26) 0px 22px 70px 4px;
+
+}
+
+@keyframes rev1 {
+    From {
+        Transform: translatex(-900px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+.revbox2 {
+    background-color: #7f6244;
+    height: 310px;
+    width: 40%;
+    text-align: center;
+    padding-top: 82px;
+    position: relative;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    animation-name: rev2;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-fill-mode: forwards;
+    box-shadow: rgb(35 26 26) 0px 22px 70px 4px;
+
+}
+
+@keyframes rev2 {
+    From {
+        Transform: translatex(900px)
+    }
+
+    To {
+        Transform: translatex(0px)
+    }
+}
+
+.star1 {
+    /* background-color: blueviolet; */
+    height: 50px;
+    width: 40%;
+    align-self: center;
+    position: absolute;
+    top: -22px;
+    border: 5px solid #614221;
+    padding: 6px;
+    color: yellow;
+
+
+}
+
+.star2 {
+    /* background-color: blueviolet; */
+    height: 50px;
+    width: 40%;
+    position: absolute;
+    top: -22px;
+    border: 5px solid #614221;
+    padding: 6px;
+    color: yellow;
+
+}
+
+.roundd1 {
+    /* background-color: red; */
+    height: 85px;
+    width: 85px;
+    top: -30px;
+    left: -20px;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #614221;
+}
+
+.roundd2 {
+    /* background-color: red; */
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    border: 5px solid #614221;
+}
+
+.person {
+    position: relative;
+    top: -35px;
+}
+
+.profile {
+    height: 100%;
+    width: 100%;
+    border-radius: 35px;
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .review {
+        margin-left: 20px;
+    }
+
+    .revbox1 {
+        width: 100%
+    }
+
+    .revbox2 {
+        width: 100%
+    }
+
+    @keyframes rev1 {
+        From {
+            Transform: translatex(0px)
+        }
+
+        To {
+            Transform: translatex(0px)
+        }
+    }
+
+    @keyframes rev2 {
+        From {
+            Transform: translatex(0px)
+        }
+
+        To {
+            Transform: translatex(0px)
+        }
+    }
+
+    .star1 {
+        width: 50%
+    }
+
+    .star2 {
+        width: 50%
+    }
+
+    .roundd1 {
+        height: 70px;
+        width: 70px;
+        /* top: -33px; */
+        left: -3px;
+    }
+
+    .roundd2 {
+        height: 70px;
+        width: 70px;
+        /* top: -33px; */
+        left: -3px;
+    }
+
+}
+
+
+
+
+.map1 {
+    display: block;
+    width: 100%;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    top: -100px
+}
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .gmap {
+        top: 628px
+    }
+}
+
+/*******footer********/
+.footer {
+    background-color: green;
+    position: relative;
+    top: -84px;
+    /* height: 800px; */
+    padding: 100px;
+    width: 100%;
+    /* background-image: url("https://images.unsplash.com/photo-1574376407492-c3cf78231def?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29mZmVlJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww"); */
+    background-image: url("./footer2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cofbox1 {
+    /* background-color: aqua; */
+    height: 270px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ccup1 {
+    /* background-color: rgb(18, 230, 159); */
+    height: 80px;
+    width: 300px;
+    margin: 10px;
+    color: white;
+
+}
+
+.ccup2 {
+    /* background-color: rgb(32, 18, 230); */
+    height: 150px;
+    /* width: 94%; */
+    margin: 10px;
+    color: white;
+}
+
+.cuim {
+    height: 70px;
+}
+
+.cofbox2 {
+    /* background-color: rgb(212, 210, 73); */
+    height: 300px;
+    width: 200px;
+    padding: 30px;
+    padding-left: 70px;
+    color: white;
+
+}
+
+.cofbox3 {
+    /* background-color: aqua; */
+    height: 450px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    /* margin-top: 157px; */
+}
+
+.cccup1 {
+    /* background-color: red; */
+    height: 200px;
+    width: 80%;
+
+}
+
+.cccup2 {
+    /* background-color: rgb(0, 255, 42); */
+    height: 200px;
+    width: 80%;
+}
+
+.ccuup3 {
+    height: 200px;
+    width: 100%;
+}
+
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .cofbox3 {
+        width: 300px
+    }
+
+    .footer {
+        justify-content: center;
+        padding: 20px;
+    }
+}
